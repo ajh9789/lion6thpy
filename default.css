@@ -1,3 +1,10 @@
-h1 {
-    color : red
+body {
+    background: #deecea;
+    font-family: arioal,sans-serif;
+    line-height: 1.5em;
+}
+
+#container {
+    border: 1px #be2d2d solid;
+    padding: 10px;
 }

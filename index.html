@@ -6,20 +6,27 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>css 실습</title>
-    <style>
-        h1 {
-        color: green;
-        }
-    </style>
     <link rel="stylesheet" href="default.css">
 </head>
 <body>
-    <h1 style="color:blue">
-<!--        인라인은 마지막에 연산하기 떄문에 속도에 문제를준다-->
-        안녕하세요
-    </h1>
-    <h1>
-        안녕하세요
-    </h1>
+<div id="container">
+    <div class="left-side">
+        <h1>환영합니다</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <span class="highlight">강조된 텍스트입니다.</span> Nulla a mollis
+            lectus.
+        </p>
+    </div>
+
+    <div class="right-side">
+        <h1>안녕하세요</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <span class="highlight">강조된 텍스트입니다.</span> Nulla a mollis
+            lectus.
+        </p>
+    </div>
+</div>
 </body>
 </html>

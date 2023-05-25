@@ -5,37 +5,42 @@
         <title>My frist Webpage</title>
     </head>
     <body>
-        <h1>Tables</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>First name</th>
-                    <th>Last name</th>
-                    <th>Email</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>길동</th>
-                    <th>홍</th>
-                    <th>asd@naver.com</th>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                    <th>길동</th>
-                    <th>홍</th>
-                    <th>asd@naver.com</th>
-                </tr>
-            <tbody>
-                <tr>
-                    <th>길동</th>
-                    <th>홍</th>
-                    <th>asd@naver.com</th>
-                </tr>
-            </tbody>
-            </tbody>
-        </table>
+        <h1>Registration From</h1>
+        <form>
+            <fieldset>
+                <legend>Account</legend>
+                <label for="name">이름</label>
+                <input type="text" id="name" required>
+                <br>
+                <label for="email">이메일</label>
+                <input type="text" id="email" required>
+                <br>
+                <label for="password">비밀번호</label>
+                <input type="password" id="password" required>
+                <br>
+            </fieldset>
+            <fieldset>
+                <legend>User Info</legend>
+                <label for="location">주소</label>
+                <select name="location" id="location">
+                    <option value="Ma">MA</option>
+                    <option value="NY">NA</option>
+                    <option value="CA">CA</option>
+                </select>
+                <br>
+                <h3>성별</h3>
+                <label for ="gender1">남성</label>
+                <input type="radio" name="gender" id="gender1" value="Male">
+                <label for ="gender2">여성</label>
+                <input type="radio" name="gender" id="gender2" value="Female">
+                <br>
+                <label for ="gender11">남성</label>
+                <input type="checkbox" name="gender" id="gender11" value="Male">
+                <label for ="gender22">여성</label>
+                <input type="checkbox" name="gender" id="gender22" value="Female">
+            </fieldset>
+            <input type="submit" value="등록">
+        </form>
     </body>
 </html>
 

@@ -1,24 +1,21 @@
-body {
-    background: #f4f4f4;
-    font-family: arial, sans-serif;
-    line-height: 1.5em;
+h1 {
+    color:red;
 }
 
-#container {
-    border: 1px #cccccc solid;
-    padding: 0 10px 0 10px;
-    width: 800px;
-    margin: 30px auto;
-    overflow: auto;
+.warpper {
+    border: #000 1px solid;
+    width: 600px;
+    height: 400px;
+    position: relative;
+    left: 50px;
+    top:100px;
 }
-
-.highlight {
-    color: red;
-    font-weight: bold;
-    font-size: 30px;
-}
-
-.left-side {
-    float: left;
-    width: 50%;
+/*내부모가 상대좌표를 쓰면 내 부모의 포지션 적용후 되는듯?*/
+.inside{
+    border: #ff0000 1px solid;
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    top:20px;
+    left:50px;
 }

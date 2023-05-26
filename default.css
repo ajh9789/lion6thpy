@@ -1,94 +1,50 @@
-h1.text1{
-    text-shadow:2px 2px 5px red;
+article {
+column-count: 3;
+column-gap: 40px;
+/*
+column-rule-style:solid;
+column-rule-width: 1px;
+column-rule-color: coral;
+*/
+column-rule: 1px solid coral;
 }
-
-h1.text2{
-    color: #ffffff;
-    text-shadow: 2px 2px 5px black;
+article h1 {
+column-span: all;
 }
-h1.text3{
-    text-shadow: 0 0 3px #ff0000,0 0 5px #0000ff;
+.textbox1 {
+border: 2px solid;
+padding: 20px;
+width: 300px;
+overflow: auto;
+resize: both;
 }
-
-#box1{
-    width: 300px;
-    height: 200px;
-    background-color: red;
-    box-shadow: 10px 10px 5px grey;
+.textbox2 {
+margin: 20px;
+padding: 10px;
+width: 300px;
+height: 100px;
+border: 1px solid black;
+outline: 1px solid red;
+outline-offset: 10px;
 }
-.card{
-    width: 250px;
-    box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    text-align: center;
+.flex-container {
+display: flex;
+/*
+flex-direction:column-reverse;
+*/
+justify-content: space-around;
+width: 400px;
+height: 250px;
+background-color: #000000;
 }
-.card-header{
-    background-color: #ff0000;
-    color:#fff;
+.flex-item {
+background-color: lightblue;
+width: 100px;
+height: 100px;
+margin: 10px;
 }
-
-
-#border-img{
-    border: 10px solid;
-    padding: 10px;
-    border-image: url('border.png') 30 round;
-    /*나인패치?*/
-}
-
-#my-bg{
-    background-image:url('border.png'), url('background.jpg');
-    background-position: left top, right bottom;
-    background-repeat: repeat, no-repeat;
-    padding: 20px;
-    background-size: 50px 50px, cover;
-}
-#grad1{
-    width: 200px;
-    height: 50px;
-    background: linear-gradient(to right,red,yellow);
-}
-#grad2{
-    width: 200px;
-    height: 50px;
-    background: linear-gradient(to bottom right,pink,purple);
-}
-#grad3{
-    width: 200px;
-    height: 50px;
-    background: radial-gradient(red,yellow,green);
-}
-#grad4{
-    width: 200px;
-    height: 50px;
-    background: radial-gradient(circle, lightblue, darkblue);
-}
-#rounded1{
-    background:lightblue;
-    color:white;
-    width: 200px;
-    padding: 10px;
-    height: 140px;
-    border-radius: 50px;
-}
-#rounded2{
-    background:orange;
-    color:white;
-    width: 200px;
-    padding: 10px;
-    height: 140px;
-    border-radius: 70px;
-}
-#rounded3{
-    background:pink;
-    color:white;
-    width: 200px;
-    padding: 10px;
-    height: 140px;
-    border-radius: 50%;
-}
-img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
+.first {
+order: -1;
 }
 
 
@@ -97,58 +53,213 @@ img {
 
 
 
+/*#box1{*/
+/*    width:100px;*/
+/*    height: 100px;*/
+/*    background-color: black;*/
+/*    transition: width 1s, height 1s;*/
+/*    transition-timing-function: linear;*/
+/*}*/
 
-a:hover {
-    color:red;
-    font-weight: bold;
-}
+/*#box1:hover{*/
+/*    width:300px;*/
+/*    height:300px;*/
+/*}*/
 
-a:active{
-    color:green;
-    font-weight: bold;
-}
-.myForm input:focus{
-    background: pink;
-    width: 300px;
-}
-.mylist li:first-child{
-    color: green;
-    font-weight: bold;
-}
-.mylist li:last-child{
-    color: red;
-    font-weight: bold;
-}
-.mylist li:nth-child(3n+3){
-    color: orange;
-    font-weight: bold;
-}
-.mylist li:nth-child(even){
-    background: yellow;
-    font-weight: bold;
-}
-.mylist li:nth-child(odd){
-    background: grey;
-    font-weight: bold;
-}
-/*odd홀수 even 짝수*/
+/*#box2{*/
+/*    width: 100px;*/
+/*    height: 100px;*/
+/*    position: relative;*/
+/*    background-color: red;*/
+/*    animation-name: colorchange;*/
+/*    animation-duration: 5s;*/
+/*}*/
+/*@keyframes colorchange {*/
+/*    0% {*/
+/*        background-color: red;*/
+/*        left: 0px;*/
+/*        top: 0px;*/
+/*}*/
+/*    25% {*/
+/*        background-color: yellow;*/
+/*        left: 200px;*/
+/*        top: 0px;*/
+/*}*/
+/*    50% {*/
+/*        background-color: green;*/
+/*        left: 200px;*/
+/*        top: 200px;*/
+/*    }*/
+/*    75% {*/
+/*        background-color: blue;*/
+/*        left: 0px;*/
+/*        top: 200px;*/
+/*    }*/
+/*    100% {*/
+/*        background-color: red;*/
+/*        left: 0px;*/
+/*        top: 0px;*/
+/*    }*/
+/*}*/
+/*#은 아이디 .은 클래스*/
 
 
-.warpper {
-    border: #000 1px solid;
-    width: 600px;
-    height: 400px;
-    position: relative;
-    left: 50px;
-    top:100px;
-}
-/*내부모가 상대좌표를 쓰면 내 부모의 포지션 적용후 되는듯?*/
-/*중복하면 가장아래에걸 사용*/
-.inside{
-    border: #ff0000 1px solid;
-    width: 200px;
-    height: 100px;
-    position: absolute;
-    top:20px;
-    left:50px;
-}
+/*h1.text1{*/
+/*    text-shadow:2px 2px 5px red;*/
+/*}*/
+
+/*h1.text2{*/
+/*    color: #ffffff;*/
+/*    text-shadow: 2px 2px 5px black;*/
+/*}*/
+/*h1.text3{*/
+/*    text-shadow: 0 0 3px #ff0000,0 0 5px #0000ff;*/
+/*}*/
+
+/*#box1{*/
+/*    width: 300px;*/
+/*    height: 200px;*/
+/*    background-color: red;*/
+/*    box-shadow: 10px 10px 5px grey;*/
+/*}*/
+/*.card{*/
+/*    width: 250px;*/
+/*    box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);*/
+/*    text-align: center;*/
+/*}*/
+/*.card-header{*/
+/*    background-color: #ff0000;*/
+/*    color:#fff;*/
+/*padding: 10px;*/
+/*font-size: 40px;*/
+/*}*/
+/*.card-container {*/
+/*padding: 10px;*/
+/*}*/
+
+
+/*#border-img{*/
+/*    border: 10px solid;*/
+/*    padding: 10px;*/
+/*    border-image: url('border.png') 30 round;*/
+/*    !*나인패치?*!*/
+/*}*/
+
+/*#my-bg{*/
+/*    background-image:url('border.png'), url('background.jpg');*/
+/*    background-position: left top, right bottom;*/
+/*    background-repeat: repeat, no-repeat;*/
+/*    padding: 20px;*/
+/*    background-size: 50px 50px, cover;*/
+/*}*/
+/*#grad1{*/
+/*    width: 200px;*/
+/*    height: 50px;*/
+/*    background: linear-gradient(to right,red,yellow);*/
+/*}*/
+/*#grad2{*/
+/*    width: 200px;*/
+/*    height: 50px;*/
+/*    background: linear-gradient(to bottom right,pink,purple);*/
+/*}*/
+/*#grad3{*/
+/*    width: 200px;*/
+/*    height: 50px;*/
+/*    background: radial-gradient(red,yellow,green);*/
+/*}*/
+/*#grad4{*/
+/*    width: 200px;*/
+/*    height: 50px;*/
+/*    background: radial-gradient(circle, lightblue, darkblue);*/
+/*}*/
+/*#rounded1{*/
+/*    background:lightblue;*/
+/*    color:white;*/
+/*    width: 200px;*/
+/*    padding: 10px;*/
+/*    height: 140px;*/
+/*    border-radius: 50px;*/
+/*}*/
+/*#rounded2{*/
+/*    background:orange;*/
+/*    color:white;*/
+/*    width: 200px;*/
+/*    padding: 10px;*/
+/*    height: 140px;*/
+/*    border-radius: 70px;*/
+/*}*/
+/*#rounded3{*/
+/*    background:pink;*/
+/*    color:white;*/
+/*    width: 200px;*/
+/*    padding: 10px;*/
+/*    height: 140px;*/
+/*    border-radius: 50%;*/
+/*}*/
+/*img {*/
+/*    width: 300px;*/
+/*    height: 300px;*/
+/*    border-radius: 50%;*/
+/*}*/
+
+
+
+
+
+
+
+
+/*a:hover {*/
+/*    color:red;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*a:active{*/
+/*    color:green;*/
+/*    font-weight: bold;*/
+/*}*/
+/*.myForm input:focus{*/
+/*    background: pink;*/
+/*    width: 300px;*/
+/*}*/
+/*.mylist li:first-child{*/
+/*    color: green;*/
+/*    font-weight: bold;*/
+/*}*/
+/*.mylist li:last-child{*/
+/*    color: red;*/
+/*    font-weight: bold;*/
+/*}*/
+/*.mylist li:nth-child(3n+3){*/
+/*    color: orange;*/
+/*    font-weight: bold;*/
+/*}*/
+/*.mylist li:nth-child(even){*/
+/*    background: yellow;*/
+/*    font-weight: bold;*/
+/*}*/
+/*.mylist li:nth-child(odd){*/
+/*    background: grey;*/
+/*    font-weight: bold;*/
+/*}*/
+/*!*odd홀수 even 짝수*!*/
+
+
+/*.warpper {*/
+/*    border: #000 1px solid;*/
+/*    width: 600px;*/
+/*    height: 400px;*/
+/*    position: relative;*/
+/*    left: 50px;*/
+/*    top:100px;*/
+/*}*/
+/*!*내부모가 상대좌표를 쓰면 내 부모의 포지션 적용후 되는듯?*!*/
+/*!*중복하면 가장아래에걸 사용*!*/
+/*.inside{*/
+/*    border: #ff0000 1px solid;*/
+/*    width: 200px;*/
+/*    height: 100px;*/
+/*    position: absolute;*/
+/*    top:20px;*/
+/*    left:50px;*/
+/*}*/

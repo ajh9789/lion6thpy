@@ -1,3 +1,36 @@
+#border-img{
+    border: 10px solid;
+    padding: 10px;
+    border-image: url('border.png') 30 round;
+}
+/*나인패치?*/
+#my-bg{
+    background-image:url('border.png'), url('background.jpg');
+    background-position: left top, right bottom;
+    background-repeat: repeat, no-repeat;
+    padding: 20px;
+    background-size: 50px 50px, cover;
+}
+#grad1{
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(to right,red,yellow);
+}
+#grad2{
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(to bottom right,pink,purple);
+}
+#grad3{
+    width: 200px;
+    height: 50px;
+    background: radial-gradient(red,yellow,green);
+}
+#grad4{
+    width: 200px;
+    height: 50px;
+    background: radial-gradient(circle, lightblue, darkblue);
+}
 #rounded1{
     background:lightblue;
     color:white;

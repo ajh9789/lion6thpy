@@ -1,3 +1,40 @@
+#rounded1{
+    background:lightblue;
+    color:white;
+    width: 200px;
+    padding: 10px;
+    height: 140px;
+    border-radius: 50px;
+}
+#rounded2{
+    background:orange;
+    color:white;
+    width: 200px;
+    padding: 10px;
+    height: 140px;
+    border-radius: 70px;
+}
+#rounded3{
+    background:pink;
+    color:white;
+    width: 200px;
+    padding: 10px;
+    height: 140px;
+    border-radius: 50%;
+}
+img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
 a:hover {
     color:red;
     font-weight: bold;

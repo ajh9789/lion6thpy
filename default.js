@@ -1,26 +1,62 @@
-var num ="20"
-num = num.toString();
-console.log(typeof  num);
 
-var number=20;
-console.log(typeof  number);
+var base = parseFloat(prompt("밑변 입력"));
+var height = parseFloat(prompt("높이 입력"));
 
-number = number.toString();
-console.log(number, typeof  number);
+var area = number = base * height * 0.5;
 
-var x =2.56789
-console.log(x.toFixed(1),typeof x.toFixed(1));
-console.log(x.toFixed(2));
-//toFixed 까지 반올림
-console.log(x.toPrecision(1),typeof x.toPrecision(1));
-console.log(x.toPrecision(2));
-//toPrecison 에서 반올림
-console.log(Number(true));
-console.log(Number(false));
-console.log(Number(" 10"));
-console.log(Number(" 10 "));
-console.log(Number("10.25"));
-//Number 숫자 변환해주는듯!
+document.write("삼각형의 넓이 : " + area);
+
+
+
+
+
+// var input1 = prompt("Enter first number");
+// var num1 = parseInt((input1));
+//
+// var num2 = parseInt(prompt("Enter second number : "));
+// var lineBreack = "<br/>";
+//
+// var result = num1 + num2;
+// document.write("the sum is : " + result + lineBreack);
+//
+// var result = num1 - num2;
+// document.write("the sub is : " + result + lineBreack);
+//
+// var result = num1 * num2;
+// document.write("the multiplication is : " + result + lineBreack);
+//
+// var result = num1 / num2;
+// document.write("the divsion is : " + result + lineBreack);
+//
+// var result = num1 % num2;
+// document.write("the remainder is : " + result + lineBreack);
+//
+//
+
+
+// var num ="20"
+// num = num.toString();
+// console.log(typeof  num);
+//
+// var number=20;
+// console.log(typeof  number);
+//
+// number = number.toString();
+// console.log(number, typeof  number);
+//
+// var x =2.56789
+// console.log(x.toFixed(1),typeof x.toFixed(1));
+// console.log(x.toFixed(2));
+// //toFixed 까지 반올림
+// console.log(x.toPrecision(1),typeof x.toPrecision(1));
+// console.log(x.toPrecision(2));
+// //toPrecison 에서 반올림
+// console.log(Number(true));
+// console.log(Number(false));
+// console.log(Number(" 10"));
+// console.log(Number(" 10 "));
+// console.log(Number("10.25"));
+// //Number 숫자 변환해주는듯!
 
 
 

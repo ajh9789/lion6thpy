@@ -1,18 +1,69 @@
-var lName = '홍'
-var fName ='길동';
+var num ="20"
+num = num.toString();
+console.log(typeof  num);
 
-var fullName =lName+fName;
+var number=20;
+console.log(typeof  number);
 
-console.log(fullName);
-console.log("Today is"+ " a "+ "beaultful day");
-console.log("My name is "+ fullName);
+number = number.toString();
+console.log(number, typeof  number);
 
-var num1 =20;
-var num2 = 30;
-var sum = num1+num2;
-console.log(num1+" + "+num2+" = "+sum);
-console.log(""+num1+num2);
-console.log(num1+num2);
+var x =2.56789
+console.log(x.toFixed(1),typeof x.toFixed(1));
+console.log(x.toFixed(2));
+//toFixed 까지 반올림
+console.log(x.toPrecision(1),typeof x.toPrecision(1));
+console.log(x.toPrecision(2));
+//toPrecison 에서 반올림
+console.log(Number(true));
+console.log(Number(false));
+console.log(Number(" 10"));
+console.log(Number(" 10 "));
+console.log(Number("10.25"));
+//Number 숫자 변환해주는듯!
+
+
+
+// var text = prompt("Enter your name");
+// document.write("your name : "+text+"<br/>");
+//
+// var len =text.length;
+// document.write("Number of characters : "+len +"<br/>")
+//
+// document.write(text.charAt(5)+"<br/>");
+//
+// document.write(text.toUpperCase()+"<br/>");
+// document.write(text.toLowerCase()+"<br/>");
+//
+//
+// var text1 = 'hi';
+// var text2 = "bye";
+// var text3 = text1.concat(text2);
+// var text4 = text1 + text2;
+// document.write(text3+"<br/>");
+// document.write(text4+"<br/>");
+// //concat 문자열 붙이는 함수인듯
+//
+// var text4 = "hello";
+// var result = text4.slice(1,2)
+// document.write(result+"<br/>");
+
+
+// var lName = '홍'
+// var fName ='길동';
+//
+// var fullName =lName+fName;
+//
+// console.log(fullName);
+// console.log("Today is"+ " a "+ "beaultful day");
+// console.log("My name is "+ fullName);
+//
+// var num1 =20;
+// var num2 = 30;
+// var sum = num1+num2;
+// console.log(num1+" + "+num2+" = "+sum);
+// console.log(""+num1+num2);
+// console.log(num1+num2);
 
 
 

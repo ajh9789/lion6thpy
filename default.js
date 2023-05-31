@@ -1,22 +1,38 @@
-//매개변수가 없는 함수 생성하기
-function message(){
-    document.write("hello I am funtion without parameter"+"</br>");
-}
-function welcomeMessage(name){
-    document.write("welcom"+name+"</br>");
-}
-function addition(num1, num2){
-    var sum=num1+num2;
-    document.write("addition is "+sum+"</br>");
-}
-function square(num){
-    return num*num;
-}
 
-message();
-welcomeMessage("안주현");
-addition(2,3);
-document.write("square of 5 is "+ square(5)+"<br/>");
+(function  display(message){
+    console.log(message);
+})("hi");
+//(함수)(매개변수) 식으로 만들면 호출없이도 바로 실행함
+
+(function  addNumbers(a,b){
+    console.log(a+b);
+})(3,4);
+
+var display2 = function displayMessage(msg){
+    console.log(msg);
+}
+//함수를 변수로 받아와서 사용가능하다 대신 변수명(매개변수)식으로 선언
+
+
+
+// function message(){
+//     document.write("hello I am funtion without parameter"+"</br>");
+// }
+// function welcomeMessage(name){
+//     document.write("welcom"+name+"</br>");
+// }
+// function addition(num1, num2){
+//     var sum=num1+num2;
+//     document.write("addition is "+sum+"</br>");
+// }
+// function square(num){
+//     return num*num;
+// }
+
+// message();
+// welcomeMessage("안주현");
+// addition(2,3);
+// document.write("square of 5 is "+ square(5)+"<br/>");
 
 // for (var i = 1; i<=100; i++){
 //     if(i==20){

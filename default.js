@@ -1,17 +1,48 @@
+var names = new Array(20);
 
-(function  display(message){
-    console.log(message);
-})("hi");
-//(함수)(매개변수) 식으로 만들면 호출없이도 바로 실행함
+names[0]="지훈";
+names[1]="은영";
 
-(function  addNumbers(a,b){
-    console.log(a+b);
-})(3,4);
+console.log(names[1]);
 
-var display2 = function displayMessage(msg){
-    console.log(msg);
-}
-//함수를 변수로 받아와서 사용가능하다 대신 변수명(매개변수)식으로 선언
+//값을 가진 배열 생성하기
+var students=["지훈","은영","수진","준호"];
+console.log("students ="+students);
+console.log("2번 인덱스의 학생 : ",students[2]);
+
+// 배열의 길이 찾기
+console.log("학생 배열의 길이 : ", students.length);
+
+//배열의 요소 추가하기
+students.push('주현');
+console.log("push 후 학생 배열 = "+ students);
+
+//배열의 요소
+students.pop()
+console.log("pop 후 학생 배열 = "+students);
+
+//배열 연결하기
+var numArray1 = [10,20];
+var numArray2 =[30,40,50,60];
+var numArray =numArray1.concat(numArray2);
+
+console.log("배열 잇기(concatenation) : "+ numArray )
+console.log(numArray1+numArray2);
+
+
+// (function  display(message){
+//     console.log(message);
+// })("hi");
+// //(함수)(매개변수) 식으로 만들면 호출없이도 바로 실행함
+//
+// (function  addNumbers(a,b){
+//     console.log(a+b);
+// })(3,4);
+//
+// var display2 = function displayMessage(msg){
+//     console.log(msg);
+// }
+// //함수를 변수로 받아와서 사용가능하다 대신 변수명(매개변수)식으로 선언
 
 
 

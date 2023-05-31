@@ -1,17 +1,36 @@
-for (var i = 1; i<=100; i++){
-    if(i==20){
-        break; //for문 종료
-    }
-    document.write(i+"<br/>");
+//매개변수가 없는 함수 생성하기
+function message(){
+    document.write("hello I am funtion without parameter"+"</br>");
 }
-//shift+F6 누르면 같은 같은 변수이름 다 바꿔준다 프로기능
-for (var i = 1; i<=100; i++){
-    if(i==20){
-        continue; //다음 for 이어서 시작
-    }
-    document.write(i+"<br/>");
+function welcomeMessage(name){
+    document.write("welcom"+name+"</br>");
+}
+function addition(num1, num2){
+    var sum=num1+num2;
+    document.write("addition is "+sum+"</br>");
+}
+function square(num){
+    return num*num;
 }
 
+message();
+welcomeMessage("안주현");
+addition(2,3);
+document.write("square of 5 is "+ square(5)+"<br/>");
+
+// for (var i = 1; i<=100; i++){
+//     if(i==20){
+//         break; //for문 종료
+//     }
+//     document.write(i+"<br/>");
+// }
+// //shift+F6 누르면 같은 같은 변수이름 다 바꿔준다 프로기능
+// for (var i = 1; i<=100; i++){
+//     if(i==20){
+//         continue; //다음 for 이어서 시작
+//     }
+//     document.write(i+"<br/>");
+// }
 
 // var i =1;
 // do {

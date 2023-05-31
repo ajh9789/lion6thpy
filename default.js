@@ -1,12 +1,48 @@
-var letter = prompt("Enter a letter : ");
+var digit = parseInt(prompt('숫자 입력  : '));
 
-letter = letter.toLowerCase();
-
-if(letter == 'a' || letter == 'a'|| letter== 'i' || letter == 'o' || letter == 'u'){
-    console.log('Vowel');
-} else {
-    console.log('Consonant');
+switch (digit){
+    case 0:
+        document.write('zero');
+        break;
+    case 1:
+        document.write("one");
+        break;
+    case 2:
+        document.write("two");
+        break;
+    case 3:
+        document.write("three");
+        break;
+    case 4:
+        document.write("four");
+        break;
+    case 5:
+        document.write("five");
+        break;
+    case 6:
+        document.write("six");
+        break;
+    case 7:
+        document.write("seven");
+        break;
+    case 8:
+        document.write("eight");
+        break;
+    case 9:
+        document.write("nine");
+        break;
 }
+
+
+// var letter = prompt("Enter a letter : ");
+//
+// letter = letter.toLowerCase();
+//
+// if(letter == 'a' || letter == 'a'|| letter== 'i' || letter == 'o' || letter == 'u'){
+//     console.log('Vowel');
+// } else {
+//     console.log('Consonant');
+// }
 
 
 // var num1 = parseInt(prompt('첫번째 숫자 입력 : '));

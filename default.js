@@ -9,7 +9,7 @@ var month = data.getMonth();
 console.log(month);
 
 //날짜 정보 얻기
-var currentData = data.getData();
+var currentData = data.getDate();
 console.log(currentData);
 
 //요일 정보 얻기

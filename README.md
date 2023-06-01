@@ -21,3 +21,7 @@
 ## 5월 31일 7일차
 - javascript  
 - 웹서버 실습
+python -m http.server
+http://localhost:8000/
+## 5월 31일 8일차
+- 부트스트랩 실습

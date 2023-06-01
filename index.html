@@ -17,7 +17,6 @@
             text-align: center;
         }
         #note {
-            min-height: 200px;
             border:1px solid #000;
             padding: 10px
         }
@@ -29,14 +28,22 @@
 </header>
 <main>
     <section class="container">
+        <ul id="todolist" class="list-group mb-0" >
+        </ul>
+
         <div id="note"
              contenteditable="true"
-             oninput="saveNote()"
+             oninput=""
         ></div>
         <button type="button"
+                class="btn btn-primary"
+                onclick="saveNote()"
+        >Add</button>
+        <button type="button"
+                style="float:right"
                 class="btn btn-danger"
-                onclick="clearNote()"
-        >Clear</button>
+                onclick="deleteTodolist()"
+        >AllDel</button>
     </section>
 
 </main>
@@ -48,21 +55,167 @@
         crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script>
-    function  getNote(){
-        var note=localStorage.getItem("note");
-        console.log('getNote:',note);
-        document.getElementById('note').innerHTML=note;
-    }
     function  saveNote(){
+        // 적은 입력 받아와서 todolist에 추가
         var note= document.getElementById("note").innerHTML;
-        localStorage.setItem("note",note);
-    }
-    function  clearNote(){
-        console.log("Clear Note!");
-        localStorage.clear();
+        var item = document.createElement('li');
+        item.classList.add('list-group-item');
+        item.innerText= note;
+        document.getElementById('todolist').appendChild(item);
+        //삭제버튼추가
+        var removeButton = document.createElement('button');
+        removeButton.innerText='Remove';
+        removeButton.classList.add('btn','btn-danger','btn-sm');
+        removeButton.style.float = "right";
+        removeButton.addEventListener('click',removeTodo)
+        item.appendChild(removeButton);
+        //입력칸 비우기
         document.getElementById('note').innerHTML="";
     }
-    getNote();
+
+    function deleteTodolist() {
+        console.log("Clear Todolist!");
+        const todolist = document.getElementById('todolist');
+        while (todolist.firstChild) {
+            todolist.removeChild(todolist.firstChild);
+        }
+    }
+    function removeTodo() {
+        console.log("Clear todo");
+        var parent = this.parentNode;
+        parent.remove();
+    }
+
+
+
+
+
+    //gpt가 수정해준 코드 라디오 박스 + 체크하면 줄긋기 + 체크시간표시+ 수정기능 추가+댓글달기 추기
+function saveNote2() {
+    // 입력한 내용을 가져와서 todolist에 추가합니다.
+    var note = document.getElementById("note").innerHTML;
+    var item = document.createElement('li');
+    item.classList.add('list-group-item');
+
+    // 입력된 내용을 텍스트로 표시하는 span 요소를 생성합니다.
+    var textSpan = document.createElement('span');
+    textSpan.innerText = note;
+
+    // 입력 필드를 생성합니다.
+    var inputField = document.createElement('input');
+    inputField.type = 'text';
+    inputField.style.display = 'none'; // 일단 숨겨둡니다.
+
+    // 수정 버튼을 생성합니다.
+    var editButton = document.createElement('button');
+    editButton.innerText = 'Edit';
+    editButton.classList.add('btn', 'btn-primary', 'btn-sm');
+    editButton.style.float = 'right';
+    editButton.addEventListener('click', function() {
+        textSpan.style.display = 'none'; // 텍스트 숨기기
+        inputField.value = textSpan.innerText; // 입력 필드에 현재 텍스트 값 설정
+        inputField.style.display = 'block'; // 입력 필드 표시
+        inputField.focus(); // 입력 필드에 포커스 설정
+    });
+
+    // 완료 버튼을 생성합니다.
+    var doneButton = document.createElement('button');
+    doneButton.innerText = 'Done';
+    doneButton.classList.add('btn', 'btn-success', 'btn-sm');
+    doneButton.style.float = 'right';
+    doneButton.style.display = 'none'; // 일단 숨겨둡니다.
+    doneButton.addEventListener('click', function() {
+        var editedNote = inputField.value; // 수정된 내용을 가져옴
+        textSpan.innerText = editedNote; // 텍스트 업데이트
+        textSpan.style.display = 'inline'; // 텍스트 표시
+        inputField.style.display = 'none'; // 입력 필드 숨기기
+        doneButton.style.display = 'none'; // 완료 버튼 숨기기
+        editButton.style.display = 'inline'; // 수정 버튼 표시
+    });
+
+// 수정 버튼을 클릭했을 때 입력 필드를 활성화합니다.
+    editButton.addEventListener('click', function() {
+        textSpan.style.display = 'none'; // 텍스트 숨기기
+        inputField.value = textSpan.innerText; // 입력 필드에 현재 텍스트 값 설정
+        inputField.style.display = 'block'; // 입력 필드 표시
+        inputField.focus(); // 입력 필드에 포커스 설정
+        doneButton.style.display = 'inline'; // 완료 버튼 표시
+        editButton.style.display = 'none'; // 수정 버튼 숨기기
+    });
+
+    // 체크박스를 생성합니다.
+    var checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.name = 'todolist';
+    checkbox.addEventListener('change', function() {
+        if (this.checked) {
+            textSpan.style.textDecoration = 'line-through';
+            if (!item.querySelector('.time-span')) {
+                var currentTime = new Date().toLocaleTimeString();
+                var timeSpan = document.createElement('span');
+                timeSpan.classList.add('time-span');
+                timeSpan.innerText = ' (' + currentTime + ')';
+                item.appendChild(timeSpan);
+            }
+        } else {
+            textSpan.style.textDecoration = 'none';
+            var timeSpan = item.querySelector('.time-span');
+            if (timeSpan) {
+                item.removeChild(timeSpan);
+            }
+        }
+    });
+// 댓글 컨테이너를 생성합니다.
+var commentContainer = document.createElement('div');
+commentContainer.classList.add('comment-container');
+commentContainer.style.marginTop = '10px'; // 상단에 10px의 마진을 줌
+
+// 댓글 입력 필드를 생성합니다.
+var commentInput = document.createElement('input');
+commentInput.type = 'text';
+commentInput.placeholder = 'Add a comment...';
+
+// 댓글 추가 버튼을 생성합니다.
+var commentButton = document.createElement('button');
+commentButton.innerText = 'Add Comment';
+commentButton.classList.add('btn', 'btn-secondary', 'btn-sm', 'mt-1');
+commentButton.addEventListener('click', function() {
+    var commentText = commentInput.value;
+    if (commentText) {
+        var commentItem = document.createElement('li');
+        commentItem.innerText = commentText;
+        item.appendChild(commentItem);
+        commentInput.value = '';
+    }
+});
+
+// 댓글 입력 필드와 추가 버튼을 댓글 컨테이너에 추가합니다.
+commentContainer.appendChild(commentInput);
+commentContainer.appendChild(commentButton);
+
+    // 체크박스와 텍스트를 아이템에 추가합니다.
+    item.appendChild(checkbox);
+    item.appendChild(textSpan);
+    item.appendChild(inputField);
+    item.appendChild(editButton);
+    item.appendChild(doneButton);
+    item.appendChild(commentContainer);
+    // 삭제 버튼을 생성합니다.
+    var removeButton = document.createElement('button');
+    removeButton.innerText = 'Remove';
+    removeButton.classList.add('btn', 'btn-danger', 'btn-sm');
+    removeButton.style.float = 'right';
+    removeButton.addEventListener('click', removeTodo);
+    item.appendChild(removeButton);
+
+    document.getElementById('todolist').appendChild(item);
+
+    // 입력칸을 비웁니다.
+    document.getElementById('note').innerHTML = '';
+}
+
+
+
 </script>
 </body>
 </html>

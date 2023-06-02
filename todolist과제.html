@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My note</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+          crossorigin="anonymous">
+    <style>
+        footer{
+            width:100vw;
+            position: fixed;
+            bottom: 0;
+            text-align: center;
+        }
+        #note {
+            border:1px solid #000;
+            padding: 10px
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>My Note</h1>
+</header>
+<main>
+    <section class="container">
+        <ul id="todolist" class="list-group mb-0" >
+        </ul>
+
+        <div id="note"
+             contenteditable="true"
+             oninput="saveText()"
+        ></div>
+
+        <button type="button"
+                class="btn btn-primary"
+                onclick="saveNote()"
+        >Add</button>
+        <button type="button"
+                style="float:right"
+                class="btn btn-danger"
+                onclick="deleteTodolist()"
+        >AllDel</button>
+    </section>
+
+</main>
+<footer style="position: fixed; bottom:0;">
+    Copyright 2023 Mynote
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script>
+let id = 0;
+
+document.addEventListener('DOMContentLoaded', function() {
+  // 로컬 저장소에서 데이터를 가져와 배열로 변환
+  const dataArr = Object.entries(localStorage).map(([key, value]) => ({
+    id: key,
+    note: value
+  }));
+
+  // id 기준으로 배열을 정렬
+  dataArr.sort((a, b) => a.id - b.id);
+
+  // 정렬된 배열을 순회하여 기존 목록 생성
+  dataArr.forEach((data) => {
+    const item = document.createElement('li');
+    item.classList.add('list-group-item');
+    item.innerText = data.note;
+    document.getElementById('todolist').appendChild(item);
+
+    const removeButton = document.createElement('button');
+    removeButton.name = data.id;
+    removeButton.innerText = 'Remove';
+    removeButton.classList.add('btn', 'btn-danger', 'btn-sm');
+    removeButton.style.float = 'right';
+    removeButton.addEventListener('click', removeTodo);
+    item.appendChild(removeButton);
+  });
+});
+
+function saveNote() {
+  // 입력 받은 내용을 가져와서 todolist에 추가
+  const note = document.getElementById('note').innerHTML;
+  const item = document.createElement('li');
+  item.classList.add('list-group-item');
+  item.innerText = note;
+  document.getElementById('todolist').appendChild(item);
+
+  // 로컬 저장소에 데이터 저장
+  const data = {
+    id: ++id,
+    note: note
+  };
+  localStorage.setItem(data.id, data.note);
+
+  // 삭제 버튼 추가
+  const removeButton = document.createElement('button');
+  removeButton.name = data.id;
+  removeButton.innerText = 'Remove';
+  removeButton.classList.add('btn', 'btn-danger', 'btn-sm');
+  removeButton.style.float = 'right';
+  removeButton.addEventListener('click', removeTodo);
+  item.appendChild(removeButton);
+
+  // 입력 칸 비우기
+  document.getElementById('note').innerHTML = '';
+}
+
+function deleteTodolist() {
+  console.log('Clear Todolist!');
+  const todolist = document.getElementById('todolist');
+  while (todolist.firstChild) {
+    todolist.removeChild(todolist.firstChild);
+  }
+  localStorage.clear();
+  id = 0;
+}
+
+function removeTodo() {
+  console.log('Clear todo');
+  const removeName = this.name;
+  console.log(removeName);
+  localStorage.removeItem(removeName);
+  const parent = this.parentNode;
+  parent.remove();
+}
+
+</script>
+</body>
+</html>

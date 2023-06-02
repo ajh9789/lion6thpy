@@ -23,6 +23,23 @@
 - 웹서버 실습
 python -m http.server
 http://localhost:8000/
+
 ## 6일 1일 8일차
 - 부트스트랩 실습
-- 간단한 메모장만들기
+- todolist 과제
+
+## 6일 2일 9일차
+- todolist 과제 피드백
+- 아이콘참고 (https://fonts.google.com/icons, https://fontawesome.com/)
+- map 변수로 받기가능, foreach 변수로 못받음
+map reduce가 따라다님 맵은 쪼개고 reduce가 다시 합친다
+- indexOf()함수 인덱스 반환해주는듯
+- substring
+- addEventListener
+- target과 this
+- 화살표함수와 일반함수
+-  const dataArr = Object.entries(localStorage).map(([key, value]) => ({
+    id: key,
+    note: value
+  }));
+- 

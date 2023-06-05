@@ -1,5 +1,45 @@
+# 출력함수
+data = [10, 20, -50, 21.3, 'LikeLion']
+print(data)
+
+print("Like", "Share", "Subscribe", sep='')
+print("Like", "Share", "Subscribe", sep='***')
+
+print("Like", "Share", "Subscribe", sep='***', end='\t')
+print("Like", "Share", "Subscribe", sep='***', end='\n')
+
+m = 27
+print("value: ", m)
+
+name = "주현"
+age = 42
+print("My name is", name, "and My age is", age, sep=' ')
+
+print("Welcome", end='\t')
+print("to", end='\t')
+print("LikeLion")
 
 
+#줄바꿈 없이 입력
+print("1")
+print("2", end='')
+print("3")
+print("4")
+
+
+#타입 변환
+n5 = ("Kim", "Bae", "Park", "Lee")
+vn5 = list(n5)
+
+print(n5, type(n5))
+print(vn5, type(vn5))
+
+
+# #튜플 변환
+# n5 = "멋쟁이 사자"
+# vn5 = tuple(n5)
+#
+# print(vn5, type(vn5))
 
 
 # # 명시적 타입 변환2

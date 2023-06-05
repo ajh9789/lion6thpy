@@ -42,4 +42,6 @@ map reduce가 따라다님 맵은 쪼개고 reduce가 다시 합친다
     id: key,
     note: value
   }));
-- 
+
+## 6월 5일 10일차
+-파이썬 기초 시작

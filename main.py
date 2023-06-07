@@ -1,21 +1,103 @@
-s=" Hello, World  "
+print("인자가 없는 함수 정의")
+def disp():
+    name = "멋쟁이사자"
+    print("Welcom to", name)
 
-print(s.upper())#모두 대문자
-print(s.lower())#모두 소문자
-print(s.swapcase())#대문자 소문자 바꾸기
-print(s.upper().title())#첫글자 대문자 나머지 소문자
-print(s.isupper())#모두 대문자 확인
-print(s.islower())#모두 소문자 확인
-print(s.istitle())#첫글자대문자 나머지 소문자
-print(s.isdigit())#숫자인지 확인
-print(s.isalpha())#알파벳인지 확인
-print(s.lstrip())#공백을 String의 왼쪽에서 제거
-print(s.rstrip())#공백을 String의 오른쪽에서 제거
-print(s.strip())#공백을 String의 왼쪽과 오른쪽에서 제거
-print(s.replace("world".title(),"there"))#문자 바꾸기
-print(s.split(","))#문자열을 리스트로 저장
-print("".join(s.split(",")))#리스트를 붙여서 반환
-print(s.startswith("Hello"))#문자열이 다음으로 시작하는지 boolean값으로 확인
+print("함수 실행")
+disp()
+
+def add():
+    x = 10
+    y = 20
+    c = x+y
+    print(c)
+add()
+
+
+def add(y):
+    x = 10.2334
+    print(x + y)
+    print(f"formatted Output {x+y:6.2f}") #뒷부분은 소수점 앞부분은 문자 전체 길이(. 과 소수점 포함)
+add(20)
+
+def add():
+    x = 10
+    y = 20
+    return x+y
+
+sum1 = add()
+print(sum1)
+
+def add(y):
+    x=10
+    return x+y
+
+sum3=add(20)
+print(sum3)
+
+def add(y):
+    x=10
+    c=x+y
+    d=y-x
+    return  c,d,50 #튜플로반환
+
+sum4,sub1,a=add(20)
+print(sum4)
+print(sub1)
+print(a)
+
+def disp():
+    def show():
+        return "Show Function"
+    result = show() + "Disp Function"
+    return result
+print(disp())
+
+def disp(sh):
+    print(type(sh))
+    print("Disp Funtion"+sh()) #sh가 함수라서 sh()
+
+def show():
+    return  " Show Funtion"
+disp(show) #괄호없이 사용하면 함수를 변수처럼 사용
+
+
+def disp():
+    def show():
+        return  " Show Funtion"
+    print("Disp Function")
+    return  show
+r_sh=disp()
+print(r_sh(),type(r_sh))
+
+def disp(sh):
+    print("Disp Funtion")
+    return sh
+
+def show():
+    return "Show Funtion"
+print(r_sh())
+print(show())
+
+
+# s=" Hello, World  "
+#
+# print(s.upper())#모두 대문자
+# print(s.lower())#모두 소문자
+# print(s.swapcase())#대문자 소문자 바꾸기
+# print(s.upper().title())#첫글자 대문자 나머지 소문자
+# print(s.isupper())#모두 대문자 확인
+# print(s.islower())#모두 소문자 확인
+# print(s.istitle())#첫글자대문자 나머지 소문자
+# print(s.isdigit())#숫자인지 확인
+# print(s.isalpha())#알파벳인지 확인
+# print(s.lstrip())#공백을 String의 왼쪽에서 제거
+# print(s.rstrip())#공백을 String의 오른쪽에서 제거
+# print(s.strip())#공백을 String의 왼쪽과 오른쪽에서 제거
+# print(s.replace("world".title(),"there"))#문자 바꾸기
+# print(s.split(","))#문자열을 리스트로 저장
+# print("".join(s.split(",")))#리스트를 붙여서 반환
+# print(s.startswith("Hello"))#문자열이 다음으로 시작하는지 boolean값으로 확인
 
 # str1 = 'likeLion'
 # str2 = "likeLion"

@@ -1,27 +1,46 @@
-str1 = 'likeLion'
-str2 = "likeLion"
-str3 = '''
-동해물과 백두산이 마르고 닳도록
-하느님이 보우하사
-우리나라 만세
-'''
-print(str1)
-print(str2)
-print(str3)
+s=" Hello, World  "
 
-str5='Hello "Like Lion" How are you'
-str6="Hello 'Like Lion' How are you"
+print(s.upper())#모두 대문자
+print(s.lower())#모두 소문자
+print(s.swapcase())#대문자 소문자 바꾸기
+print(s.upper().title())#첫글자 대문자 나머지 소문자
+print(s.isupper())#모두 대문자 확인
+print(s.islower())#모두 소문자 확인
+print(s.istitle())#첫글자대문자 나머지 소문자
+print(s.isdigit())#숫자인지 확인
+print(s.isalpha())#알파벳인지 확인
+print(s.lstrip())#공백을 String의 왼쪽에서 제거
+print(s.rstrip())#공백을 String의 오른쪽에서 제거
+print(s.strip())#공백을 String의 왼쪽과 오른쪽에서 제거
+print(s.replace("world".title(),"there"))#문자 바꾸기
+print(s.split(","))#문자열을 리스트로 저장
+print("".join(s.split(",")))#리스트를 붙여서 반환
+print(s.startswith("Hello"))#문자열이 다음으로 시작하는지 boolean값으로 확인
 
-print(str5)
-print(str6)
-
-str7="Hello \nHow are you"
-str8="Hello \\nHow are you"
-str9=r"Hello \nHow are you"
-
-print(str7)
-print(str8)
-print(str9)
+# str1 = 'likeLion'
+# str2 = "likeLion"
+# str3 = '''
+# 동해물과 백두산이 마르고 닳도록
+# 하느님이 보우하사
+# 우리나라 만세
+# '''
+# print(str1)
+# print(str2)
+# print(str3)
+#
+# str5='Hello "Like Lion" How are you'
+# str6="Hello 'Like Lion' How are you"
+#
+# print(str5)
+# print(str6)
+#
+# str7="Hello \nHow are you"
+# str8="Hello \\nHow are you"
+# str9=r"Hello \nHow are you"
+#
+# print(str7)
+# print(str8)
+# print(str9)
 
 
 # from array import *

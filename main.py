@@ -1,38 +1,128 @@
-# 출력함수
-data = [10, 20, -50, 21.3, 'LikeLion']
-print(data)
+# 예제 1 : 간단한 if 문
+x=5
+if x > 3:
+    print("x는 3보다 큽니다.")
 
-print("Like", "Share", "Subscribe", sep='')
-print("Like", "Share", "Subscribe", sep='***')
+age=18
+if age>= 18:
+    print("성인입니다.")
+else:
+    print("미성년자입니다")
 
-print("Like", "Share", "Subscribe", sep='***', end='\t')
-print("Like", "Share", "Subscribe", sep='***', end='\n')
+# 중첩된 if else 중첩된 if문은 가독성을 떨어뜨리니 되도록 사용하지말기
+score = 85
+if score >= 90:
+    print("A 등급")
+else :
+    if score >= 80:
+        print("B 등급")
+    else:
+        if score >= 70:
+            print("C 등급")
+        else:
+            print("D 학점")
 
-m = 27
-print("value: ", m)
+# 예제4 : if else
+marks = 75
+if marks >= 90:
+    print("A 등급")
+elif marks >=80:
+    print("B 등급")
+elif marks >=70:
+    print("C 등급")
+else:
+    print("D등급")
 
-name = "주현"
-age = 42
-print("My name is", name, "and My age is", age, sep=' ')
+a = int(input("Enter Number Greater then 2:"))
+if a > 2:
+    print("Corret!! You have Entered: ",a)
+else:
+    print("Wrong!! You have Entered", a)
 
-print("Welcome", end='\t')
-print("to", end='\t')
-print("LikeLion")
+day = input("요일을 입력하세요: ")
+if day == "Mon":
+    print("오늘은 월요일")
+elif day == "Tue":
+    print("오늘은 화요일")
+elif day == "Wed":
+    print("오늘은 수요일")
+else :
+    print("오늘은 휴일")
 
+# 다른 언어와 다르게 else를 넣으면 마지막에 else문을 실행한다.
+i=0
+while(i<10):
+    i+=1
+    print("i: ",i)
+else :
+    print("else")
 
-#줄바꿈 없이 입력
-print("1")
-print("2", end='')
-print("3")
-print("4")
+# 무한 루프 while문 break이 있으면 else가 실행이 안된다.
+while True:
+    a = int(input("Enter Menu Number:"))
+    if a=='0':
+        break
+    print("i: ",i)
+else:
+    print("else")
 
+#첫번째 while 루프 디버깅할떄 while
+a = 1
+while a<= 10:
+    print(a)
+    a +=1
+else:
+    print("While 조건이 거짓이므로 Else 부분 실행됨")
+print("코드 종료")
 
-#타입 변환
-n5 = ("Kim", "Bae", "Park", "Lee")
-vn5 = list(n5)
+# 무한 루프 컨트롤+C 누르면 인터럽트 시스템콜로 종료된다.
+while True:
+    print("멋쟁이 사자")
+print("코드 종료")
 
-print(n5, type(n5))
-print(vn5, type(vn5))
+i = 0
+while True:
+    i += 1
+    print(i)
+    if i == 5:
+        break
+print("코드 종료")
+
+# # 출력함수
+# data = [10, 20, -50, 21.3, 'LikeLion']
+# print(data)
+#
+# print("Like", "Share", "Subscribe", sep='')
+# print("Like", "Share", "Subscribe", sep='***')
+#
+# print("Like", "Share", "Subscribe", sep='***', end='\t')
+# print("Like", "Share", "Subscribe", sep='***', end='\n')
+#
+# m = 27
+# print("value: ", m)
+#
+# name = "주현"
+# age = 42
+# print("My name is", name, "and My age is", age, sep=' ')
+#
+# print("Welcome", end='\t')
+# print("to", end='\t')
+# print("LikeLion")
+#
+#
+# #줄바꿈 없이 입력
+# print("1")
+# print("2", end='')
+# print("3")
+# print("4")
+#
+#
+# #타입 변환
+# n5 = ("Kim", "Bae", "Park", "Lee")
+# vn5 = list(n5)
+#
+# print(n5, type(n5))
+# print(vn5, type(vn5))
 
 
 # #튜플 변환

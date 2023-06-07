@@ -1,33 +1,59 @@
-from array import *
-stu_roll =array('i',[101,102,103,104,105,106,107])
-print("5까지 찍기")
-a=stu_roll[0:5]
-for i in a:
-    print(i)
-print("1:5까지")
-a=stu_roll[1:5]
-for i in a:
-    print(i)
-print("처음부터 전부출력")
-b=stu_roll[0:]
-for i in b:
-    print(i)
-print("처음부터 5번쨰까지")
-c=stu_roll[:5]
-for i in c:
-    print(i)
-print("마지막 요소 4개 출력")
-d=stu_roll[-4:]
-for i in d:
-    print(i)
-print("0붙 6번쨰까지 건너뛰어 출력")
-e=stu_roll[0:7:2]
-for i in e:
-    print(i)
-print("마지막 5개 요소 중 오른쪽 부터 2개의 요소를 출력")
-f=stu_roll[-5:-3]
-for i in f:
-    print(i)
+str1 = 'likeLion'
+str2 = "likeLion"
+str3 = '''
+동해물과 백두산이 마르고 닳도록
+하느님이 보우하사
+우리나라 만세
+'''
+print(str1)
+print(str2)
+print(str3)
+
+str5='Hello "Like Lion" How are you'
+str6="Hello 'Like Lion' How are you"
+
+print(str5)
+print(str6)
+
+str7="Hello \nHow are you"
+str8="Hello \\nHow are you"
+str9=r"Hello \nHow are you"
+
+print(str7)
+print(str8)
+print(str9)
+
+
+# from array import *
+# stu_roll =array('i',[101,102,103,104,105,106,107])
+# print("5까지 찍기")
+# a=stu_roll[0:5]
+# for i in a:
+#     print(i)
+# print("1:5까지")
+# a=stu_roll[1:5]
+# for i in a:
+#     print(i)
+# print("처음부터 전부출력")
+# b=stu_roll[0:]
+# for i in b:
+#     print(i)
+# print("처음부터 5번쨰까지")
+# c=stu_roll[:5]
+# for i in c:
+#     print(i)
+# print("마지막 요소 4개 출력")
+# d=stu_roll[-4:]
+# for i in d:
+#     print(i)
+# print("0붙 6번쨰까지 건너뛰어 출력")
+# e=stu_roll[0:7:2]
+# for i in e:
+#     print(i)
+# print("마지막 5개 요소 중 오른쪽 부터 2개의 요소를 출력")
+# f=stu_roll[-5:-3]
+# for i in f:
+#     print(i)
 
 #
 # n = len(stu_roll)

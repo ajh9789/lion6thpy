@@ -1,23 +1,50 @@
 from array import *
+stu_roll =array('i',[101,102,103,104,105,106,107])
+print("5까지 찍기")
+a=stu_roll[0:5]
+for i in a:
+    print(i)
+print("1:5까지")
+a=stu_roll[1:5]
+for i in a:
+    print(i)
+print("처음부터 전부출력")
+b=stu_roll[0:]
+for i in b:
+    print(i)
+print("처음부터 5번쨰까지")
+c=stu_roll[:5]
+for i in c:
+    print(i)
+print("마지막 요소 4개 출력")
+d=stu_roll[-4:]
+for i in d:
+    print(i)
+print("0붙 6번쨰까지 건너뛰어 출력")
+e=stu_roll[0:7:2]
+for i in e:
+    print(i)
+print("마지막 5개 요소 중 오른쪽 부터 2개의 요소를 출력")
+f=stu_roll[-5:-3]
+for i in f:
+    print(i)
 
-
-stu_roll =array('i',[101,102,103,104,105])
-
-n = len(stu_roll)
-i = 0
-while i < n:
-    print(stu_roll[i])
-    i += 1
-
-print("배열 pop() 함수 실습")
-
-element = stu_roll.pop(0)
-print('element:', element)
-n = len(stu_roll)
-i = 0
-while i < n:
-    print(stu_roll[i])
-    i += 1
+#
+# n = len(stu_roll)
+# i = 0
+# while i < n:
+#     print(stu_roll[i])
+#     i += 1
+#
+# print("배열 pop() 함수 실습")
+#
+# element = stu_roll.pop(0)
+# print('element:', element)
+# n = len(stu_roll)
+# i = 0
+# while i < n:
+#     print(stu_roll[i])
+#     i += 1
 
 
 # n=len(stu_roll)

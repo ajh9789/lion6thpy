@@ -1,9 +1,37 @@
-# 틀만 만들어두고 TODO를 사용하면 협업할때 좋음
-a = 5
-if a < 6:
-    pass # TODO ㅇㅇ
-else:
-    print("6 보다 큼")
+from array import *
+
+stu_roll =array('i',[101,102,103,104,105])
+n=len(stu_roll)
+i=0
+while i<n:
+    print(stu_roll[i])
+    i +=1
+
+
+print("Array After Insert")
+stu_roll.insert(1, 106)
+stu_roll.insert(3, 107)
+n= len(stu_roll)
+i=0
+while i<n:
+    print(stu_roll[i])
+    i+=1
+
+print("배열 요소 삭제")
+
+stu_roll.remove(107)
+n=len(stu_roll)
+i=0
+while i<n:
+    print(stu_roll[i])
+    i +=1
+
+# # 틀만 만들어두고 TODO를 사용하면 협업할때 좋음
+# a = 5
+# if a < 6:
+#     pass #
+# else:
+#     print("6 보다 큼")
 
 
 

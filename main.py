@@ -1,92 +1,121 @@
-# 예제 1 : 간단한 if 문
-x=5
-if x > 3:
-    print("x는 3보다 큽니다.")
-
-age=18
-if age>= 18:
-    print("성인입니다.")
-else:
-    print("미성년자입니다")
-
-# 중첩된 if else 중첩된 if문은 가독성을 떨어뜨리니 되도록 사용하지말기
-score = 85
-if score >= 90:
-    print("A 등급")
-else :
-    if score >= 80:
-        print("B 등급")
-    else:
-        if score >= 70:
-            print("C 등급")
-        else:
-            print("D 학점")
-
-# 예제4 : if else
-marks = 75
-if marks >= 90:
-    print("A 등급")
-elif marks >=80:
-    print("B 등급")
-elif marks >=70:
-    print("C 등급")
-else:
-    print("D등급")
-
-a = int(input("Enter Number Greater then 2:"))
-if a > 2:
-    print("Corret!! You have Entered: ",a)
-else:
-    print("Wrong!! You have Entered", a)
-
-day = input("요일을 입력하세요: ")
-if day == "Mon":
-    print("오늘은 월요일")
-elif day == "Tue":
-    print("오늘은 화요일")
-elif day == "Wed":
-    print("오늘은 수요일")
-else :
-    print("오늘은 휴일")
-
-# 다른 언어와 다르게 else를 넣으면 마지막에 else문을 실행한다.
-i=0
-while(i<10):
-    i+=1
-    print("i: ",i)
-else :
-    print("else")
-
-# 무한 루프 while문 break이 있으면 else가 실행이 안된다.
-while True:
-    a = int(input("Enter Menu Number:"))
-    if a=='0':
-        break
-    print("i: ",i)
-else:
-    print("else")
-
-#첫번째 while 루프 디버깅할떄 while
-a = 1
-while a<= 10:
-    print(a)
-    a +=1
-else:
-    print("While 조건이 거짓이므로 Else 부분 실행됨")
-print("코드 종료")
-
-# 무한 루프 컨트롤+C 누르면 인터럽트 시스템콜로 종료된다.
-while True:
-    print("멋쟁이 사자")
-print("코드 종료")
-
-i = 0
-while True:
-    i += 1
+for i in range(5):
     print(i)
-    if i == 5:
-        break
-print("코드 종료")
+
+for i in range(2,7):
+    print(i)
+
+for i in range(1, 10, 2):
+    print(i)
+
+for i in range(-1, -10, -2):
+    print(i)
+
+a = range(5)
+print(a[0])
+print(a[1])
+print(a[2])
+print(a[3])
+print(a[4])
+
+print("Reverse Rage with Start, stop, step")
+r = range(5, 0, -1)
+print(r[0])
+print(r[1])
+print(r[2])
+print(r[3])
+print(r[4])
+
+
+
+# # 예제 1 : 간단한 if 문
+# x=5
+# if x > 3:
+#     print("x는 3보다 큽니다.")
+#
+# age=18
+# if age>= 18:
+#     print("성인입니다.")
+# else:
+#     print("미성년자입니다")
+#
+# # 중첩된 if else 중첩된 if문은 가독성을 떨어뜨리니 되도록 사용하지말기
+# score = 85
+# if score >= 90:
+#     print("A 등급")
+# else :
+#     if score >= 80:
+#         print("B 등급")
+#     else:
+#         if score >= 70:
+#             print("C 등급")
+#         else:
+#             print("D 학점")
+#
+# # 예제4 : if else
+# marks = 75
+# if marks >= 90:
+#     print("A 등급")
+# elif marks >=80:
+#     print("B 등급")
+# elif marks >=70:
+#     print("C 등급")
+# else:
+#     print("D등급")
+#
+# a = int(input("Enter Number Greater then 2:"))
+# if a > 2:
+#     print("Corret!! You have Entered: ",a)
+# else:
+#     print("Wrong!! You have Entered", a)
+#
+# day = input("요일을 입력하세요: ")
+# if day == "Mon":
+#     print("오늘은 월요일")
+# elif day == "Tue":
+#     print("오늘은 화요일")
+# elif day == "Wed":
+#     print("오늘은 수요일")
+# else :
+#     print("오늘은 휴일")
+#
+# # 다른 언어와 다르게 else를 넣으면 마지막에 else문을 실행한다.
+# i=0
+# while(i<10):
+#     i+=1
+#     print("i: ",i)
+# else :
+#     print("else")
+#
+# # 무한 루프 while문 break이 있으면 else가 실행이 안된다.
+# while True:
+#     a = int(input("Enter Menu Number:"))
+#     if a=='0':
+#         break
+#     print("i: ",i)
+# else:
+#     print("else")
+#
+# #첫번째 while 루프 디버깅할떄 while
+# a = 1
+# while a<= 10:
+#     print(a)
+#     a +=1
+# else:
+#     print("While 조건이 거짓이므로 Else 부분 실행됨")
+# print("코드 종료")
+#
+# # 무한 루프 컨트롤+C 누르면 인터럽트 시스템콜로 종료된다.
+# while True:
+#     print("멋쟁이 사자")
+# print("코드 종료")
+#
+# i = 0
+# while True:
+#     i += 1
+#     print(i)
+#     if i == 5:
+#         break
+# print("코드 종료")
 
 # # 출력함수
 # data = [10, 20, -50, 21.3, 'LikeLion']

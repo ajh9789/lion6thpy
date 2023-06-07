@@ -1,11 +1,20 @@
-# for in
-st = "멋쟁이 사자"
-for ch in st:
-    print(ch)
+# 틀만 만들어두고 TODO를 사용하면 협업할때 좋음
+a = 5
+if a < 6:
+    pass # TODO ㅇㅇ
 else:
-    print("Else")
+    print("6 보다 큼")
 
-print("코드 종료")
+
+
+# # for in
+# st = "멋쟁이 사자"
+# for ch in st:
+#     print(ch)
+# else:
+#     print("Else")
+#
+# print("코드 종료")
 
 
 

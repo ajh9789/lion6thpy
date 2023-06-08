@@ -1,21 +1,40 @@
 fruits = ["apple", "bananan", "cherry", "orange"]
+vegetables =["carrot","cucumber"]
 
-print(fruits)
+grocery =fruits+vegetables
+print(grocery)
 
-fruits.append("grape")
+numbers=[10,5,7,1,9]
+numbers.sort()
+print(numbers)
 
-print(fruits)
+slice_numbers = numbers[1:4]
+print(slice_numbers)
 
-fruits.insert(2, "kiwi")
+numbers_copy = numbers.copy() #그냥 쓰면 원본변수가 바뀐다
+print(numbers_copy)
 
-print(fruits)
+numbers_clone =numbers[:]
+print(numbers_clone)
 
-print(fruits.pop())
-print(fruits.pop(1))
-
-print(fruits)
-fruits.remove("apple")
-print(fruits)
+# fruits = ["apple", "bananan", "cherry", "orange"]
+#
+# print(fruits)
+#
+# fruits.append("grape")
+#
+# print(fruits)
+#
+# fruits.insert(2, "kiwi")
+#
+# print(fruits)
+#
+# print(fruits.pop())
+# print(fruits.pop(1))
+#
+# print(fruits)
+# fruits.remove("apple")
+# print(fruits)
 # a = 50
 #
 #

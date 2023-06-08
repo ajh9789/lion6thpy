@@ -1,21 +1,52 @@
-fruits = ["apple", "bananan", "cherry", "orange"]
-vegetables =["carrot","cucumber"]
+def generate_alphabet(start_letter,end_letter):
+    start = ord(start_letter)
+    end= ord(end_letter)
+    while start<=end:
+        yield chr(start)
+        start +=1
 
-grocery =fruits+vegetables
-print(grocery)
+runner = generate_alphabet('A','F')
 
-numbers=[10,5,7,1,9]
-numbers.sort()
-print(numbers)
+for letter in runner:
+    print(letter)
 
-slice_numbers = numbers[1:4]
-print(slice_numbers)
+def fibonacci(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
 
-numbers_copy = numbers.copy() #그냥 쓰면 원본변수가 바뀐다
-print(numbers_copy)
 
-numbers_clone =numbers[:]
-print(numbers_clone)
+runner = fibonacci(100)
+
+print(next(runner))
+
+print("======")
+print(runner)
+print(next(runner))
+print("======")
+
+for num in runner:
+    print(num)
+
+# fruits = ["apple", "bananan", "cherry", "orange"]
+# vegetables =["carrot","cucumber"]
+#
+# grocery =fruits+vegetables
+# print(grocery)
+#
+# numbers=[10,5,7,1,9]
+# numbers.sort()
+# print(numbers)
+#
+# slice_numbers = numbers[1:4]
+# print(slice_numbers)
+#
+# numbers_copy = numbers.copy() #그냥 쓰면 원본변수가 바뀐다
+# print(numbers_copy)
+#
+# numbers_clone =numbers[:]
+# print(numbers_clone)
 
 # fruits = ["apple", "bananan", "cherry", "orange"]
 #

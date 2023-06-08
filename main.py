@@ -1,54 +1,110 @@
-a = {10, 20, 30}
-a = {10, 20, 30, "멋쟁이사자", "Bae", 40}
-a = {10, 20, 30, "멋쟁이사자", "Bae", 40, 10, 20}
+stu = {101: 'Kim', 102: 'Bae', 103: 'Hong'}
+fees = {'kim': 2000, 'bae': 3000, 'hong': 8000}
+print(stu[101])
+print(stu[102])
+print(stu[103])
 
-b = set()
-print(type(b))
-a.add(50)
-a.update([10, 20, 60, 70])
-print(a)
-a.remove('멋쟁이사자')
-a.discard('멋쟁이사자')
-a.discard(70)
-print(a)
+print(fees['kim'])
+print(fees['bae'])
+print(fees['hong'])
 
-new_set = a.copy()
-new_set.clear()
-print(new_set)
+stu[102] = 'Python'
 
-a = {10, 20, 30}
-a = {10, 20, 30, "멋쟁이사자", "Bae", 40}
-a = {10, 20, 30, "멋쟁이사자", "Bae", 40, 10, 20}
+print(stu)
 
-new_set = a.copy()
+stu[104] = '멋쟁이사자'
 
-b = set()
-print(type(b))
-a.add(50)
-a.update([10, 20, 60, 70])
-print(a)
-a.remove('멋쟁이사자')
-a.discard('멋쟁이사자')
-a.discard(70)
-print(a)
+print(stu)
 
+del stu[102]
+
+print(stu)
+
+print(102 not in stu)
+
+# stu.clear()
+
+print(stu)
+
+new_stu = stu.copy()
+
+key = (101, 102, 103)
+value = '멋쟁이사자'
+new_stu = dict.fromkeys(key, value)
+
+print(new_stu)
+print(stu[101])
+print(stu.get(101))
+print(stu.items())
+print(stu.keys())
+print(stu.values())
+stu[104] = '멋쟁이사자'
+print(stu)
+stu.update({104: '멋쟁이사자2'})
+print(stu)
+print(stu.pop(104))
+print(stu)
+print(stu.pop(104, 'No Value'))
+stu.setdefault(104, 'Park')
+print(stu)
+
+print(stu.popitem())
+print(stu.popitem())
+print(stu.popitem())
+
+
+
+# a = {10, 20, 30}
+# a = {10, 20, 30, "멋쟁이사자", "Bae", 40}
+# a = {10, 20, 30, "멋쟁이사자", "Bae", 40, 10, 20}
+#
+# b = set()
+# print(type(b))
+# a.add(50)
+# a.update([10, 20, 60, 70])
+# print(a)
+# a.remove('멋쟁이사자')
+# a.discard('멋쟁이사자')
+# a.discard(70)
+# print(a)
+#
+# new_set = a.copy()
 # new_set.clear()
 # print(new_set)
-
-intersection_a_new = a.intersection(new_set, a, b)
-print(intersection_a_new)
-
-union_a = a.union(new_set)
-print('union_a:', union_a)
-
-difference_a = a.difference(new_set)
-print('difference_a:', difference_a)
-
-print(b.issubset(a))
-print(a.issuperset(b))
-
-sym_a = a.symmetric_difference(new_set)
-print('symmetric_difference:', sym_a)
+#
+# a = {10, 20, 30}
+# a = {10, 20, 30, "멋쟁이사자", "Bae", 40}
+# a = {10, 20, 30, "멋쟁이사자", "Bae", 40, 10, 20}
+#
+# new_set = a.copy()
+#
+# b = set()
+# print(type(b))
+# a.add(50)
+# a.update([10, 20, 60, 70])
+# print(a)
+# a.remove('멋쟁이사자')
+# a.discard('멋쟁이사자')
+# a.discard(70)
+# print(a)
+#
+# # new_set.clear()
+# # print(new_set)
+#
+# intersection_a_new = a.intersection(new_set, a, b)
+# print(intersection_a_new)
+#
+# union_a = a.union(new_set)
+# print('union_a:', union_a)
+#
+# difference_a = a.difference(new_set)
+# print('difference_a:', difference_a)
+#
+# print(b.issubset(a))
+# print(a.issuperset(b))
+#
+# sym_a = a.symmetric_difference(new_set)
+# print('symmetric_difference:', sym_a)
 
 
 # b = (10)

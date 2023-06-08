@@ -1,62 +1,115 @@
-b = (10)
-c = (10,)
+a = {10, 20, 30}
+a = {10, 20, 30, "멋쟁이사자", "Bae", 40}
+a = {10, 20, 30, "멋쟁이사자", "Bae", 40, 10, 20}
 
+b = set()
 print(type(b))
-print(type(c))
+a.add(50)
+a.update([10, 20, 60, 70])
+print(a)
+a.remove('멋쟁이사자')
+a.discard('멋쟁이사자')
+a.discard(70)
+print(a)
 
-d = (10, 20, 30, 40)
-e = (10, 20, -50, 21.3, '멋쟁이사자')
-f = 10, 20, -50, 21.3, '멋쟁이사자'
+new_set = a.copy()
+new_set.clear()
+print(new_set)
 
-print(d, e, f, sep="\n")
+a = {10, 20, 30}
+a = {10, 20, 30, "멋쟁이사자", "Bae", 40}
+a = {10, 20, 30, "멋쟁이사자", "Bae", 40, 10, 20}
 
-print(f[1])
-print(f[2])
-print(f[3])
-print(f[4])
-print(f[:3])
-print(f[1:4])
-print(f[3:])
-g = c + f
-print(g)
-print(f * 5)
-print(-10 in f)
-print("========")
-h = (10, 20, -50, 20)
-print(min(h), max(h))
-print(h.count(20))
-print(h.index(20))
-sorted_a = sorted(h)
-print(sorted_a)
+new_set = a.copy()
 
-a = (10, 20, -50)
-x, y, z = a #튜플 해체
-print(x, y, z)
+b = set()
+print(type(b))
+a.add(50)
+a.update([10, 20, 60, 70])
+print(a)
+a.remove('멋쟁이사자')
+a.discard('멋쟁이사자')
+a.discard(70)
+print(a)
 
-a = 1
-b = 2
-print(a, b)
+# new_set.clear()
+# print(new_set)
 
-tmp = a
-a = b
-b = tmp
+intersection_a_new = a.intersection(new_set, a, b)
+print(intersection_a_new)
 
-print(a, b)
+union_a = a.union(new_set)
+print('union_a:', union_a)
 
-a, b = b, a #스압
+difference_a = a.difference(new_set)
+print('difference_a:', difference_a)
 
-print(a, b)
+print(b.issubset(a))
+print(a.issuperset(b))
 
-list_h = list(h) #튜플을 리스트화
+sym_a = a.symmetric_difference(new_set)
+print('symmetric_difference:', sym_a)
 
-print(list_h, type(list_h))
 
-tuple_h = tuple(list_h)
-
-print(tuple_h, type(tuple_h))
-
-nested_tuple = ((1, 2, 3), (4, 5, 6), (7, 8, 9))
-print(nested_tuple)
+# b = (10)
+# c = (10,)
+#
+# print(type(b))
+# print(type(c))
+#
+# d = (10, 20, 30, 40)
+# e = (10, 20, -50, 21.3, '멋쟁이사자')
+# f = 10, 20, -50, 21.3, '멋쟁이사자'
+#
+# print(d, e, f, sep="\n")
+#
+# print(f[1])
+# print(f[2])
+# print(f[3])
+# print(f[4])
+# print(f[:3])
+# print(f[1:4])
+# print(f[3:])
+# g = c + f
+# print(g)
+# print(f * 5)
+# print(-10 in f)
+# print("========")
+# h = (10, 20, -50, 20)
+# print(min(h), max(h))
+# print(h.count(20))
+# print(h.index(20))
+# sorted_a = sorted(h)
+# print(sorted_a)
+#
+# a = (10, 20, -50)
+# x, y, z = a #튜플 해체
+# print(x, y, z)
+#
+# a = 1
+# b = 2
+# print(a, b)
+#
+# tmp = a
+# a = b
+# b = tmp
+#
+# print(a, b)
+#
+# a, b = b, a #스압
+#
+# print(a, b)
+#
+# list_h = list(h) #튜플을 리스트화
+#
+# print(list_h, type(list_h))
+#
+# tuple_h = tuple(list_h)
+#
+# print(tuple_h, type(tuple_h))
+#
+# nested_tuple = ((1, 2, 3), (4, 5, 6), (7, 8, 9))
+# print(nested_tuple)
 
 
 # def generate_alphabet(start_letter,end_letter):

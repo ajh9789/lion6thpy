@@ -1,33 +1,94 @@
-def generate_alphabet(start_letter,end_letter):
-    start = ord(start_letter)
-    end= ord(end_letter)
-    while start<=end:
-        yield chr(start)
-        start +=1
+b = (10)
+c = (10,)
 
-runner = generate_alphabet('A','F')
+print(type(b))
+print(type(c))
 
-for letter in runner:
-    print(letter)
+d = (10, 20, 30, 40)
+e = (10, 20, -50, 21.3, '멋쟁이사자')
+f = 10, 20, -50, 21.3, '멋쟁이사자'
 
-def fibonacci(n):
-    a, b = 0, 1
-    for _ in range(n):
-        yield a
-        a, b = b, a + b
+print(d, e, f, sep="\n")
+
+print(f[1])
+print(f[2])
+print(f[3])
+print(f[4])
+print(f[:3])
+print(f[1:4])
+print(f[3:])
+g = c + f
+print(g)
+print(f * 5)
+print(-10 in f)
+print("========")
+h = (10, 20, -50, 20)
+print(min(h), max(h))
+print(h.count(20))
+print(h.index(20))
+sorted_a = sorted(h)
+print(sorted_a)
+
+a = (10, 20, -50)
+x, y, z = a #튜플 해체
+print(x, y, z)
+
+a = 1
+b = 2
+print(a, b)
+
+tmp = a
+a = b
+b = tmp
+
+print(a, b)
+
+a, b = b, a #스압
+
+print(a, b)
+
+list_h = list(h) #튜플을 리스트화
+
+print(list_h, type(list_h))
+
+tuple_h = tuple(list_h)
+
+print(tuple_h, type(tuple_h))
+
+nested_tuple = ((1, 2, 3), (4, 5, 6), (7, 8, 9))
+print(nested_tuple)
 
 
-runner = fibonacci(100)
+# def generate_alphabet(start_letter,end_letter):
+#     start = ord(start_letter)
+#     end= ord(end_letter)
+#     while start<=end:
+#         yield chr(start)
+#         start +=1
+# # ord() ord() 함수는 한 문자의 아스키코드 값을 정수형으로 반환해준다.
+# runner = generate_alphabet('A','F')
+#
+# for letter in runner:
+#     print(letter)
 
-print(next(runner))
-
-print("======")
-print(runner)
-print(next(runner))
-print("======")
-
-for num in runner:
-    print(num)
+# def fibonacci(n):
+#     a, b = 0, 1
+#     for _ in range(n):
+#         yield a
+#         a, b = b, a + b
+#
+#
+# runner = fibonacci(100)
+#
+# print(next(runner))
+#
+# print("======")
+# print(runner)
+# print(next(runner))
+# print("======")
+#
+# for num in runner:
+#     print(num)
 
 # fruits = ["apple", "bananan", "cherry", "orange"]
 # vegetables =["carrot","cucumber"]

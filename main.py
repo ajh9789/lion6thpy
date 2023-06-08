@@ -1,83 +1,99 @@
-print("인자가 없는 함수 정의")
-def disp():
-    name = "멋쟁이사자"
-    print("Welcom to", name)
+def pw(x,y):
+    z = x ** y
+    print(z)
 
-print("함수 실행")
-disp()
+pw(2,5)
+# pw(5,2,3)
+def show(name='홍길동', age=99): # 디폴트값설정으로 인수없을때 오류방지
+    print(f"name: {name} Age: {age}")
 
-def add():
-    x = 10
-    y = 20
-    c = x+y
-    print(c)
-add()
+show(name="멋쟁이사자",age=27)
+# show(name="멋쟁이사자")
 
 
-def add(y):
-    x = 10.2334
-    print(x + y)
-    print(f"formatted Output {x+y:6.2f}") #뒷부분은 소수점 앞부분은 문자 전체 길이(. 과 소수점 포함)
-add(20)
-
-def add():
-    x = 10
-    y = 20
-    return x+y
-
-sum1 = add()
-print(sum1)
-
-def add(y):
-    x=10
-    return x+y
-
-sum3=add(20)
-print(sum3)
-
-def add(y):
-    x=10
-    c=x+y
-    d=y-x
-    return  c,d,50 #튜플로반환
-
-sum4,sub1,a=add(20)
-print(sum4)
-print(sub1)
-print(a)
-
-def disp():
-    def show():
-        return "Show Function"
-    result = show() + "Disp Function"
-    return result
-print(disp())
-
-def disp(sh):
-    print(type(sh))
-    print("Disp Funtion"+sh()) #sh가 함수라서 sh()
-
-def show():
-    return  " Show Funtion"
-disp(show) #괄호없이 사용하면 함수를 변수처럼 사용
 
 
-def disp():
-    def show():
-        return  " Show Funtion"
-    print("Disp Function")
-    return  show
-r_sh=disp()
-print(r_sh(),type(r_sh))
 
-def disp(sh):
-    print("Disp Funtion")
-    return sh
-
-def show():
-    return "Show Funtion"
-print(r_sh())
-print(show())
+# print("인자가 없는 함수 정의")
+# def disp():
+#     name = "멋쟁이사자"
+#     print("Welcom to", name)
+#
+# print("함수 실행")
+# disp()
+#
+# def add():
+#     x = 10
+#     y = 20
+#     c = x+y
+#     print(c)
+# add()
+#
+#
+# def add(y):
+#     x = 10.2334
+#     print(x + y)
+#     print(f"formatted Output {x+y:6.2f}") #뒷부분은 소수점 앞부분은 문자 전체 길이(. 과 소수점 포함)
+# add(20)
+#
+# def add():
+#     x = 10
+#     y = 20
+#     return x+y
+#
+# sum1 = add()
+# print(sum1)
+#
+# def add(y):
+#     x=10
+#     return x+y
+#
+# sum3=add(20)
+# print(sum3)
+#
+# def add(y):
+#     x=10
+#     c=x+y
+#     d=y-x
+#     return  c,d,50 #튜플로반환
+#
+# sum4,sub1,a=add(20)
+# print(sum4)
+# print(sub1)
+# print(a)
+#
+# def disp():
+#     def show():
+#         return "Show Function"
+#     result = show() + "Disp Function"
+#     return result
+# print(disp())
+#
+# def disp(sh):
+#     print(type(sh))
+#     print("Disp Funtion"+sh()) #sh가 함수라서 sh()
+#
+# def show():
+#     return  " Show Funtion"
+# disp(show) #괄호없이 사용하면 함수를 변수처럼 사용
+#
+#
+# def disp():
+#     def show():
+#         return  " Show Funtion"
+#     print("Disp Function")
+#     return  show
+# r_sh=disp()
+# print(r_sh(),type(r_sh))
+#
+# def disp(sh):
+#     print("Disp Funtion")
+#     return sh
+#
+# def show():
+#     return "Show Funtion"
+# print(r_sh())
+# print(show())
 
 
 # s=" Hello, World  "

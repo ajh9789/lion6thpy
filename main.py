@@ -1,17 +1,42 @@
-def pw(x,y):
-    z = x ** y
-    print(z)
-
-pw(2,5)
-# pw(5,2,3)
-def show(name='홍길동', age=99): # 디폴트값설정으로 인수없을때 오류방지
-    print(f"name: {name} Age: {age}")
-
-show(name="멋쟁이사자",age=27)
-# show(name="멋쟁이사자")
+def add(x, y):
+    z = x + y
+    print("Addition: ", z)
 
 
+add(5, 2)
 
+
+def add(*num):
+    z = num[0] + num[1] + num[2]
+    print("Addtition *: ", z)
+
+
+add(5, 2, 4)
+
+
+def add(x, *num):
+    z = x + num[0] + num[1]
+    print("Addition x *: ", z)
+
+
+add(5, 2, 4)
+
+def add(**num): #**이면 가변키워드도 변경이가능하다
+    z = num['a']+ num['b']+num['c']
+    print("Addition: ",z)
+
+add(a=2,b=3,c=4,d=2)
+# def pw(x,y):
+#     z = x ** y
+#     print(z)
+#
+# pw(2,5)
+# # pw(5,2,3)
+# def show(name='홍길동', age=99): # 디폴트값설정으로 인수없을때 오류방지
+#     print(f"name: {name} Age: {age}")
+#
+# show(name="멋쟁이사자",age=27)
+# # show(name="멋쟁이사자")
 
 
 # print("인자가 없는 함수 정의")
@@ -223,7 +248,6 @@ show(name="멋쟁이사자",age=27)
 #     print("6 보다 큼")
 
 
-
 # # for in
 # st = "멋쟁이 사자"
 # for ch in st:
@@ -232,7 +256,6 @@ show(name="멋쟁이사자",age=27)
 #     print("Else")
 #
 # print("코드 종료")
-
 
 
 # for i in range(5):
@@ -261,7 +284,6 @@ show(name="멋쟁이사자",age=27)
 # print(r[2])
 # print(r[3])
 # print(r[4])
-
 
 
 # # 예제 1 : 간단한 if 문
@@ -452,7 +474,6 @@ show(name="멋쟁이사자",age=27)
 # print(a is not b)
 
 
-
 # # 멤버 in 연산자
 #
 # st1 = "Welcome to 멋쟁이 사자"
@@ -463,7 +484,6 @@ show(name="멋쟁이사자",age=27)
 #
 # st3 = "Welcome to 멋쟁이 사자"
 # print("subs" not in st3)
-
 
 
 # # 비트 연산자 실습
@@ -559,7 +579,6 @@ show(name="멋쟁이사자",age=27)
 # # 몫 (음수)
 # a = -5
 # print('a // b(음수) :', a // b)
-
 
 
 # # 변수 선언

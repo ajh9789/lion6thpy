@@ -1,31 +1,70 @@
-def add(x, y):
-    z = x + y
-    print("Addition: ", z)
+def show():
+    x = 10
+    print(x)
 
 
-add(5, 2)
+show()
 
 
-def add(*num):
-    z = num[0] + num[1] + num[2]
-    print("Addtition *: ", z)
+def add(y):
+    x = 10
+    print(x)
+    print(x + y)
 
 
-add(5, 2, 4)
+add(20)
+
+a = 50
 
 
-def add(x, *num):
-    z = x + num[0] + num[1]
-    print("Addition x *: ", z)
+def show():
+    x = 10
+    print(x)  # local
+    print(a)  # global
 
 
-add(5, 2, 4)
+show()
 
-def add(**num): #**이면 가변키워드도 변경이가능하다
-    z = num['a']+ num['b']+num['c']
-    print("Addition: ",z)
+print("Gobal Variable a:", a)
+i = 0
 
-add(a=2,b=3,c=4,d=2)
+
+def myfun():
+    a = i + 1
+    print("My Function a:", a)
+
+
+myfun()
+print("Gobal Variable a:", a)
+
+# def add(x, y):
+#     z = x + y
+#     print("Addition: ", z)
+#
+#
+# add(5, 2)
+#
+#
+# def add(*num):
+#     z = num[0] + num[1] + num[2]
+#     print("Addtition *: ", z)
+#
+#
+# add(5, 2, 4)
+#
+#
+# def add(x, *num):
+#     z = x + num[0] + num[1]
+#     print("Addition x *: ", z)
+#
+#
+# add(5, 2, 4)
+#
+# def add(**num): #**이면 가변키워드도 변경이가능하다
+#     z = num['a']+ num['b']+num['c']
+#     print("Addition: ",z)
+#
+# add(a=2,b=3,c=4,d=2)
 # def pw(x,y):
 #     z = x ** y
 #     print(z)

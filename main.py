@@ -1,25 +1,49 @@
-def decor(fun):
-    def inner():
-        a = fun()
-        add = a + 5
-        return add
+class Mobile:
+    fp = 'yes'
 
-    return inner
+realme = Mobile()
+redme=Mobile()
+geek= Mobile()
 
+print(Mobile.fp)
+print(realme.fp)
+print(redme.fp)
+print(geek.fp)
 
-def num():
-    return 10
+Mobile.fp='no'
+print(Mobile.fp)
+print(realme.fp)
+print(redme.fp)
+print(geek.fp)
 
+realme.fp='yes'
+print(Mobile.fp)
+print(realme.fp)
+print(redme.fp)
+print(geek.fp)
 
-result_fun = decor(num)
-print(result_fun())
-
-
-@decor
-def num():
-    return 10
-
-print(num())
+# def decor(fun):
+#     def inner():
+#         a = fun()
+#         add = a + 5
+#         return add
+#
+#     return inner
+#
+#
+# def num():
+#     return 10
+#
+#
+# result_fun = decor(num)
+# print(result_fun())
+#
+#
+# @decor
+# def num():
+#     return 10
+#
+# print(num())
 
 
 # show = lambda x: print(x)

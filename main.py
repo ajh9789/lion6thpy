@@ -1,10 +1,19 @@
-file_object =open('new_example.txt','w')
+with open('example.txt','w') as file_object:
+    content = """This is a multiline string.
+Python is a versatile language.
+It is easy to learn and use."""
+    print(content)
+    file_object.write(content)
 
-content = "This is a new file\nPython is fun!"
 
-file_object.write(content)
 
-file_object.close()
+# file_object =open('new_example.txt','w')
+#
+# content = "This is a new file\nPython is fun!"
+#
+# file_object.write(content)
+#
+# file_object.close()
 
 # file_object = open('example.txt', 'r')
 #

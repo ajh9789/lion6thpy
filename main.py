@@ -1,20 +1,59 @@
-import time
-from datetime import datetime
-from datetime import date
+class ParentClass:
+    def __init__(self):
+        self.name = 'parent'
+        self.number = 10
+    def __str__(self):
+        return f'ParentClass name : {self.name}, number : {self.number}'
 
-dt = datetime(year=2023, month=5, day=5, hour=10, minute=30)
-print(dt)
-print(type(dt))
+    def add_num(self,new_number):
+        print('부모 : ', new_number, '만큼 더해야지')
+        self.number=self.number+new_number
 
-current_time = time.ctime()
-current_datetime = datetime.now()
-print(current_datetime, current_time)
+class ChildClass(ParentClass):
+    def __init__(self):
+        super().__init__()
+        self.name ='child'
+    def __str__(self):
+        return f'ChildClass name : {self.name}, number : {self.number}'
+    def add_num(self,new_number):
+        print('말 안듣는 자식: 고정적으로 5더할거')
+        self.number=self.number+5
 
-d = date(year=2023, month=6, day=25)
-print(d)
 
-current_date = date.today()
-print(current_date)
+parent = ParentClass()
+child = ChildClass()
+print('클래스 정보')
+print(parent)
+print(child)
+print()
+
+print('7을 더하세요')
+parent.add_num(7)
+child.add_num(7)
+
+print(parent)
+print(child)
+print()
+
+
+
+# import time
+# from datetime import datetime
+# from datetime import date
+#
+# dt = datetime(year=2023, month=5, day=5, hour=10, minute=30)
+# print(dt)
+# print(type(dt))
+#
+# current_time = time.ctime()
+# current_datetime = datetime.now()
+# print(current_datetime, current_time)
+#
+# d = date(year=2023, month=6, day=25)
+# print(d)
+#
+# current_date = date.today()
+# print(current_date)
 # class Vector:
 #     def __init__(self,x,y):
 #         self.x=x

@@ -7,6 +7,7 @@ class Engine:
 class Wheels:
     def rotate(self):
         return "Whells are rotating"
+
 #다중 상속
 class Car(Engine, Wheels):
     pass

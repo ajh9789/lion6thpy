@@ -1,8 +1,26 @@
-from python.MyApp.Handlers.text_handler import handle_text
+class CustomException(Exception):
+    def __init__(self, mesage):
+        self.message = mesage
 
-#패키지 추가 빨간 밑줄 alt+엔터로 편하게 할수있다
-input_text = "python package pratice"
-handle_text(input_text)
+try:
+    raise CustomException("This is a custom exception")
+except CustomException as e:
+    print(f"Error:{e.message}")
+
+
+# try:
+#     result = 10 / 0
+# except ZeroDivisionError:
+#     print("Error : Division by zero")
+#
+# print("Program continues.")
+
+
+# from python.MyApp.Handlers.text_handler import handle_text
+#
+# #패키지 추가 빨간 밑줄 alt+엔터로 편하게 할수있다
+# input_text = "python package pratice"
+# handle_text(input_text)
 
 # class Engine:
 #     def start(self):

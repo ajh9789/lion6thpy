@@ -1,19 +1,33 @@
-a = ['a1','b2','c3']
+words = ['apple','bat','bar','atom','book']
+by_letters={}
 
-for i in range(len(a)):
-    print((i,a[i]))
+for word in words:
+    letter=word[0]
+    if letter not in by_letters:
+        by_letters[letter]=[word]
+    else:
+        by_letters[letter].append(word)
 
-print("------")
+print(by_letters)
+print(by_letters['c']) #키에러
 
-i=0
-for v in a:
-    print(i,v)
-    i+=1
 
-print("------")
-
-for i,v in enumerate(a):
-    print(i,v)
+# a = ['a1','b2','c3']
+#
+# for i in range(len(a)):
+#     print((i,a[i]))
+#
+# print("------")
+#
+# i=0
+# for v in a:
+#     print(i,v)
+#     i+=1
+#
+# print("------")
+#
+# for i,v in enumerate(a):
+#     print(i,v)
 
 
 # class CustomException(Exception):

@@ -4,18 +4,18 @@ curret_directory = os.getcwd()
 print(curret_directory)
 
 os.mkdir('new_directory')
-os.makedirs('parent_directory/child_directory/grandchild_directory1/2/3/4/5')
+os.makedirs('../parent_directory/child_directory/grandchild_directory1/2/3/4/5')
 
 # os.chdir('new_directory')
 # curret_directory2 = os.getcwd()
 # print(curret_directory2)
 
 os.rmdir('new_directory')
-os.removedirs("parent_directory/child_directory/grandchild_directory1/2/3/4/5")
+os.removedirs("../parent_directory/child_directory/grandchild_directory1/2/3/4/5")
 
-os.makedirs('parent_directory/child_directory/grandchild_directory1/2/3/4/5')
+os.makedirs('../parent_directory/child_directory/grandchild_directory1/2/3/4/5')
 
-for dirpath, dirnames, filenames, in os.walk('parent_directory'):
+for dirpath, dirnames, filenames, in os.walk('../parent_directory'):
     print(f"디렉터리 경로 : {dirpath}")
     print(f"디렉터리 이름 : {dirnames}")
     print(f"파일이름 : {filenames}")

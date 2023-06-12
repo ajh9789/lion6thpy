@@ -1,21 +1,27 @@
-class Engine:
-    def start(self):
-        return "Engine started"
-    def stop(self):
-        return "Engine stopped"
+from python.MyApp.Handlers.text_handler import handle_text
 
-class Wheels:
-    def rotate(self):
-        return "Whells are rotating"
+#패키지 추가 빨간 밑줄 alt+엔터로 편하게 할수있다
+input_text = "python package pratice"
+handle_text(input_text)
 
-#다중 상속
-class Car(Engine, Wheels):
-    pass
-#인스턴스 생성
-my_car =Car()
-# 부모 클래스의 메소드 사용
-print(my_car.start())
-print(my_car.rotate())
+# class Engine:
+#     def start(self):
+#         return "Engine started"
+#     def stop(self):
+#         return "Engine stopped"
+#
+# class Wheels:
+#     def rotate(self):
+#         return "Whells are rotating"
+#
+# #다중 상속
+# class Car(Engine, Wheels):
+#     pass
+# #인스턴스 생성
+# my_car =Car()
+# # 부모 클래스의 메소드 사용
+# print(my_car.start())
+# print(my_car.rotate())
 
 # class Vehicle:
 #     def __init__(self, make, model, year):

@@ -95,8 +95,21 @@ https://leetcode.com/problems/merge-k-sorted-lists/
 https://leetcode.com/problems/design-hashmap/
 https://leetcode.com/problems/jewels-and-stones/
 
-## 6월 17일 19일차
+## 6월 19일 19일차
 -그래프,  최단경로
 -장고 기초
 https://leetcode.com/problems/linked-list-cycle/
 https://leetcode.com/problems/number-of-islands/
+
+## 6월 20일 20일차
+-dfs알고리즘, 다익스트라 알고리즘
+-장고 기초
+https://leetcode.com/problems/letter-combinations-of-a-phone-number/
+https://leetcode.com/problems/permutations/
+https://leetcode.com/problems/reconstruct-itinerary/
+https://leetcode.com/problems/network-delay-time/
+
+
+
+
+

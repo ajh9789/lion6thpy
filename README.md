@@ -109,7 +109,12 @@ https://leetcode.com/problems/permutations/
 https://leetcode.com/problems/reconstruct-itinerary/
 https://leetcode.com/problems/network-delay-time/
 
-
-
-
+## 6월 21일 21일차
+- 트리 알고리즘
+- 장고 기초
+https://leetcode.com/problems/maximum-depth-of-binary-tree/
+https://leetcode.com/problems/longest-univalue-path/
+https://leetcode.com/problems/balanced-binary-tree/
+https://leetcode.com/problems/minimum-height-trees/
+https://leetcode.com/problems/range-sum-of-bst/
 

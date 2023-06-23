@@ -123,7 +123,8 @@ https://leetcode.com/problems/range-sum-of-bst/
 - 장고 기초
 https://leetcode.com/problems/kth-largest-element-in-an-array/
 
-
+## 6월 23일 23일차
+- 장고 기초
 
 
 
